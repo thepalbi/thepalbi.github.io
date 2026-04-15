@@ -69,7 +69,7 @@
       <d-article>
         {% if page.toc and page.toc.size > 0 %}
           <d-contents>
-            <nav class="l-text figcaption">
+            <div class="l-text figcaption">
               <h3>Contents</h3>
               {% for section in page.toc %}
                 <div>
@@ -85,15 +85,15 @@
                   </ul>
                 {% endif %}
               {% endfor %}
-            </nav>
+            </div>
           </d-contents>
 
         {% elsif page.toc == true %}
           <d-contents>
-            <nav class="l-text figcaption">
+            <div class="l-text figcaption">
               <h3>Contents</h3>
-              {% toc %}
-            </nav>
+              <nav aria-label="Table of contents" data-toggle="toc"></nav>
+            </div>
           </d-contents>
         {% endif %}
 
